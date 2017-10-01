@@ -2,7 +2,7 @@
   "name": "website-2.0",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://shleewhite.com",
+  "homepage": "https://www.shleewhite.com",
   "dependencies": {
     "gh-pages": "^1.0.0",
     "react": "^15.6.1",
