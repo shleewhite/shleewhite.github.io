@@ -1,35 +1,116 @@
 import React, { Component } from 'react';
+
 import wc_pic from '../images/wanna_camp.png';
 import ra_pic from '../images/recent_articles2.png';
+import cg_pic from '../images/callout_box.png';
+import ap_pic from '../images/a11y_patterns.png';
+import bb_pic from '../images/button_builder.png';
+import mp_pic from '../images/marine_plastics.png';
+import gs_pic from '../images/game_share.png';
+
+// TODO: responsive card sizing
+
+class Card extends Component {
+	render() {
+		return (
+			<div className="pure-u-1-3">
+				<div className="card">
+					{
+						this.props.img !== null ? 
+							<img alt="" className="card-img" src={ this.props.img }/> : null
+					}
+					<h2 className="card-title"><a href={ this.props.url }>{ this.props.title }</a></h2>
+					<div className="card-desc">
+						{ this.props.children }
+					</div>
+				</div>
+			</div>
+		);
+	}
+}
 
 class Portfolio extends Component {
 	render() {
-		return(
-			<main id="portfolio-content">
-				<div className="portfolio-entry" id="wanna_camp">
-					<h2>Wanna Camp</h2>
-					<img src={wc_pic} alt=""></img>
-					<p>Made during CalHacks 3.0, uses Meteor.js and MongoDB to store campsites near UCSC and return applicable campsites based on a form submitted by the user. Code for the app can be found <a href="https://github.com/shleewhite/wanna_camp">here</a>.</p>
+		return (
+			<div className="pure-u-1">
+				<div className="pure-g card-container">
+					<Card
+						title="Marine Plastics Monitor"
+						img={ mp_pic }
+						url="https://github.com/vincentwu96/MarinePlastics"
+					>
+						<p>
+							Led team of six people over two quarters to create a site for the Santa Cruz based 
+							non-profit <a href="https://cleanoceansinternational.org/">Clean Oceans International</a>. 
+							The site is a database for collecting information about the types and quantaties of marine 
+							debris around the world. It is built with ReactJS, D3, MongoDB and uses the Google Maps API and Auth0.
+						</p>
+					</Card>
+					<Card
+						title="Game Share"
+						img={ gs_pic }
+						url="https://github.com/wyattades/GameShare"
+					>
+						<p>
+							Was on a team of five people for one quarter that made a web-based tank game. Users can
+							create their own games that are hosted on a server and can be shared with a link to others.
+							Written in JavaScript with Socket.io, PixiJS, Phaser.io and Firebase as the database. I contributed
+							mainly to the styling of the site and worked on the game editor.
+						</p>
+					</Card>
+					<Card
+						title="Accessibility Patterns"
+						img={ ap_pic }
+						url="https://www.lightningdesignsystem.com/accessibility/patterns/overview/"
+					>
+						<p>
+							Main project for Salesforce accessibility internship. Involved researching best accessibility practices for
+							dynamic web components and creating a best practices version working version of the component. Also wrote detailed
+							documentation on how to make the component, what it is used for, and why the best practices should be followed.
+						</p>
+					</Card>
+					<Card
+						title="Wanna Camp"
+						img={ wc_pic }
+						url="https://github.com/shleewhite/wanna_camp"
+					>
+						<p>
+							Made during CalHacks 3.0, uses Meteor.js and MongoDB to store campsites near UCSC 
+							and return applicable campsites based on a form submitted by the user.
+						</p>
+					</Card>
+					<Card 
+						title="Recent Articles Plugin"
+						img={ ra_pic }
+						url="http://codepen.io/shleewhite/pen/BKpNYX"
+					>
+						<p>
+							Made for <a href="http://news.ucsc.edu/" className="link">news.ucsc.edu</a> to keep users on 
+							the site longer by showing the most recent articles posted at the end of each article. 
+						</p>
+					</Card>
+					<Card
+						title="Callout Box Generator"
+						img={ cg_pic }
+						url="https://codepen.io/shleewhite/pen/bpxxOB"
+					>
+						<p>
+							Made for UCSC Relations to generate "callout boxes", a div with an image and text, within 
+							articles published on <a href="http://news.ucsc.edu/" className="link">news.ucsc.edu</a>.
+						</p>
+					</Card>
+					<Card
+						title="Button Builder"
+						img={ bb_pic }
+						url="https://codepen.io/shleewhite/pen/mVxjdx"
+					>
+						<p>
+							Made for <a href="https://urelations.ucsc.edu/">UCSC Relations</a> to generate uniform images that 
+							can be used as buttons in email marketing.
+						</p>
+					</Card>
 				</div>
-				<div className="portfolio-entry" id="recentArticles">
-					<h2>Recent Articles Plugin</h2>
-					<img src={ra_pic} alt=""></img>
-					<p>Made for <a href="http://news.ucsc.edu/" className="link">news.ucsc.edu</a> to keep users on the site longer by showing the most recent articles posted at the end of each article. The code can be found on my <a href="http://codepen.io/shleewhite/pen/BKpNYX" className="link">Codepen</a>.</p>
-				</div>
-				<div className="portfolio-entry">
-					<h2>Callout Box Generator</h2>
-					<p data-height="265" data-theme-id="0" data-slug-hash="bpxxOB" data-default-tab="result" data-user="shleewhite" data-embed-version="2" data-pen-title="Callout Box Builder" className="codepen">See the Pen <a href="https://codepen.io/shleewhite/pen/bpxxOB/">Callout Box Builder</a> by Lee White (<a href="https://codepen.io/shleewhite">@shleewhite</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-					<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-					<p>Made for UCSC Relations to generate "callout boxes", a div with an image and text, within an article published on news.ucsc.edu.</p>
-				</div>
-				<div className="portfolio-entry">
-					<h2>Button Builder</h2>
-					<p data-height="265" data-theme-id="0" data-slug-hash="mVxjdx" data-default-tab="result" data-user="shleewhite" data-embed-version="2" data-pen-title="Button Builder 2" className="codepen">See the Pen <a href="https://codepen.io/shleewhite/pen/mVxjdx/">Button Builder 2</a> by Lee White (<a href="https://codepen.io/shleewhite">@shleewhite</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-					<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-					<p>Made for UCSC Relations to generate uniform images that can be used as buttons in email marketing.</p>
-				</div>
-				
-			</main>
+			</div>
 		);
 	}
 }

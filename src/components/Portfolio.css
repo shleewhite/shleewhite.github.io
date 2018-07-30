@@ -1,0 +1,74 @@
+/* 
+	COLOR PALETTE
+
+	background: F7F4F5
+	primary: A22522
+	secondary: 4E8098
+	muted: CED3DC
+	dark: 071E22
+
+*/
+
+p { margin: 0px; }
+.card-container { justify-content: flex-start; }
+
+.card {
+	min-height: 100px;
+	background-color: white;
+	margin: 25px;
+
+	-webkit-box-shadow: 5px 5px 5px 0px rgba(206,211,220,0.67);
+	-moz-box-shadow: 5px 5px 5px 0px rgba(206,211,220,0.67);
+	box-shadow: 5px 5px 5px 0px rgba(206,211,220,0.67);
+}
+
+.card a {
+	color: #4E8098;
+	text-decoration: underline;
+}
+
+.card-title {
+	text-align: center;
+	color: #071E22;
+	padding-top: 10px;
+	font-size: 1.25em;
+}
+
+.card-title a {
+  text-decoration: none;
+	position: relative;
+	color: #A22522;
+}
+
+.card-title a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background-color: #A22522;;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all .5s cubic-bezier(1,.25,0,.75) 0s;
+  transition: all .5s cubic-bezier(1,.25,0,.75) 0s;
+}
+	
+.card-title a:hover:before {
+	visibility: visible;
+	-webkit-transform: scaleX(1);
+	transform: scaleX(1);
+}
+
+.card-img {
+	width: 100%;
+	display: block;
+	margin: auto;
+}
+
+.card-desc {
+	padding: 0px 30px 30px 30px;
+	font-size: 0.8em;
+	text-align: center;
+}

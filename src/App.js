@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import Nav from './common/Nav';
-import About from './components/About';
+import Nav from './components/Nav';
 import Portfolio from './components/Portfolio';
-import Footer from './common/Footer';
+import Resume from './components/Resume';
+import Footer from './components/Footer';
 import {
   Route,
   BrowserRouter as Router
@@ -13,13 +13,13 @@ class App extends Component {
     return (
       <div>
         <Router>
-          <div>
+          <div className="pure-g">
             <Nav />
-            <Route exact path="/" component={About}/>
-            <Route path="/portfolio" component={Portfolio}/>
+            <Route exact path="/" component={ Portfolio }/>
+            <Route exact path="/resume" component={ Resume }/>
+            <Footer />
           </div>
         </Router>
-        <Footer />
       </div>
     );
   }

@@ -1,0 +1,53 @@
+/* 
+	COLOR PALETTE
+
+	background: F7F4F5
+	primary: A22522
+	secondary: 4E8098
+	muted: CED3DC
+	dark: 071E22
+
+*/
+
+.resume-section {
+  margin: 0px 20px 0px 20px;
+}
+
+
+.resume-section h2 {
+  border-top: black 1px solid;
+  text-transform: uppercase;
+}
+
+.resume-section h3 {
+	font-style: italic;
+	margin-bottom: 0.5em;
+}
+
+.resume-section h4 {
+	color: #777;
+	margin-top: 0px;
+}
+
+.resume-section h5, .resume-section div h5 {
+	font-weight: bold;
+	font-size: 1em;
+	margin-top: 1.25em;
+	margin-bottom: 0px;
+}
+
+.exp-section {
+	margin-bottom: 1.5em;
+}
+
+.grad-info {
+	margin-top: 0px;
+}
+
+.ref {
+	font-style: italic;
+	font-weight: bolder;
+	font-size: 1.25em;
+	text-align: center;
+	margin-bottom: 1.5em;
+}
