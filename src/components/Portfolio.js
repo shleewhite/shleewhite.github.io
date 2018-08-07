@@ -8,20 +8,30 @@ import bb_pic from '../images/button_builder.png';
 import mp_pic from '../images/marine_plastics.png';
 import gs_pic from '../images/game_share.png';
 
-// TODO: responsive card sizing
-
 class Card extends Component {
 	render() {
 		return (
-			<div className="pure-u-1-3">
+			<div className="pure-u-1 pure-u-md-1-3">
 				<div className="card">
 					{
 						this.props.img !== null ? 
-							<img alt="" className="card-img" src={ this.props.img }/> : null
+							<a href={ this.props.live ? this.props.live : this.props.code }>
+								<img alt="" className="card-img" src={ this.props.img }/>
+							</a> : null
 					}
-					<h2 className="card-title"><a href={ this.props.url }>{ this.props.title }</a></h2>
+					<h2 className="card-title">{ this.props.title }</h2>
 					<div className="card-desc">
 						{ this.props.children }
+					</div>
+					<div className="card-footer pure-g">
+						{
+							this.props.live ? 
+								<a className="pure-u-1-2" href={ this.props.live }>Live Site</a> : null
+						}
+						{
+							this.props.code ? 
+								<a className="pure-u-1-2" href={ this.props.code }>Code</a> : null
+						}
 					</div>
 				</div>
 			</div>
@@ -37,7 +47,8 @@ class Portfolio extends Component {
 					<Card
 						title="Marine Plastics Monitor"
 						img={ mp_pic }
-						url="https://github.com/vincentwu96/MarinePlastics"
+						code="https://github.com/vincentwu96/MarinePlastics"
+						live="https://marineplastics.herokuapp.com/"
 					>
 						<p>
 							Led team of six people over two quarters to create a site for the Santa Cruz based 
@@ -49,7 +60,8 @@ class Portfolio extends Component {
 					<Card
 						title="Game Share"
 						img={ gs_pic }
-						url="https://github.com/wyattades/GameShare"
+						code="https://github.com/wyattades/GameShare"
+						live="https://gameshare-app.herokuapp.com/"
 					>
 						<p>
 							Was on a team of five people for one quarter that made a web-based tank game. Users can
@@ -61,7 +73,7 @@ class Portfolio extends Component {
 					<Card
 						title="Accessibility Patterns"
 						img={ ap_pic }
-						url="https://www.lightningdesignsystem.com/accessibility/patterns/overview/"
+						live="https://www.lightningdesignsystem.com/accessibility/patterns/overview/"
 					>
 						<p>
 							Main project for Salesforce accessibility internship. Involved researching best accessibility practices for
@@ -72,7 +84,7 @@ class Portfolio extends Component {
 					<Card
 						title="Wanna Camp"
 						img={ wc_pic }
-						url="https://github.com/shleewhite/wanna_camp"
+						code="https://github.com/shleewhite/wanna_camp"
 					>
 						<p>
 							Made during CalHacks 3.0, uses Meteor.js and MongoDB to store campsites near UCSC 
@@ -82,7 +94,7 @@ class Portfolio extends Component {
 					<Card 
 						title="Recent Articles Plugin"
 						img={ ra_pic }
-						url="http://codepen.io/shleewhite/pen/BKpNYX"
+						code="http://codepen.io/shleewhite/pen/BKpNYX"
 					>
 						<p>
 							Made for <a href="http://news.ucsc.edu/" className="link">news.ucsc.edu</a> to keep users on 
@@ -92,7 +104,7 @@ class Portfolio extends Component {
 					<Card
 						title="Callout Box Generator"
 						img={ cg_pic }
-						url="https://codepen.io/shleewhite/pen/bpxxOB"
+						code="https://codepen.io/shleewhite/pen/bpxxOB"
 					>
 						<p>
 							Made for UCSC Relations to generate "callout boxes", a div with an image and text, within 
@@ -102,7 +114,7 @@ class Portfolio extends Component {
 					<Card
 						title="Button Builder"
 						img={ bb_pic }
-						url="https://codepen.io/shleewhite/pen/mVxjdx"
+						code="https://codepen.io/shleewhite/pen/mVxjdx"
 					>
 						<p>
 							Made for <a href="https://urelations.ucsc.edu/">UCSC Relations</a> to generate uniform images that 
