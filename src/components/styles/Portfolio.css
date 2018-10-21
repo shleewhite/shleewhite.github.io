@@ -12,6 +12,16 @@
 p { margin: 0px; }
 .card-container { justify-content: flex-start; }
 
+.assistive-text {
+	position: absolute !important;
+	margin: -1px !important;
+	border: 0 !important;
+	padding: 0 !important;
+	width: 1px !important;
+	height: 1px !important;
+	overflow: hidden !important;
+}
+
 .card {
 	min-height: 100px;
 	background-color: white;
@@ -35,10 +45,12 @@ p { margin: 0px; }
 }
 
 .card-img {
-	width: 100%;
 	max-height: 200px;
+	max-width: 80%;
 	display: block;
-	margin: auto;
+	margin: 0 auto;
+	padding: 1em;
+	padding-bottom: 0px;
 }
 
 .card-desc {

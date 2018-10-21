@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 
-import wc_pic from '../images/wanna_camp.png';
-import ra_pic from '../images/recent_articles2.png';
-import cg_pic from '../images/callout_box.png';
-import ap_pic from '../images/a11y_patterns.png';
-import bb_pic from '../images/button_builder.png';
-import mp_pic from '../images/marine_plastics.png';
-import gs_pic from '../images/game_share.png';
+import wc_pic from '../../images/wanna_camp.png';
+import ra_pic from '../../images/recent_articles2.png';
+import cg_pic from '../../images/callout_box.png';
+import ap_pic from '../../images/a11y_patterns.png';
+import bb_pic from '../../images/button_builder.png';
+import mp_pic from '../../images/marine_plastics.png';
+import gs_pic from '../../images/game_share.png';
 
 class Card extends Component {
 	render() {
@@ -15,7 +15,7 @@ class Card extends Component {
 				<div className="card">
 					{
 						this.props.img !== null ? 
-							<a href={ this.props.live ? this.props.live : this.props.code }>
+							<a aria-hidden="true" href={ this.props.live ? this.props.live : this.props.code }>
 								<img alt="" className="card-img" src={ this.props.img }/>
 							</a> : null
 					}
@@ -26,11 +26,11 @@ class Card extends Component {
 					<div className="card-footer pure-g">
 						{
 							this.props.live ? 
-								<a className="pure-u-1-2" href={ this.props.live }>Live Site</a> : null
+								<a className="pure-u-1-2" href={ this.props.live }><span className="assistive-text">{this.props.title}</span>Live Site</a> : null
 						}
 						{
 							this.props.code ? 
-								<a className="pure-u-1-2" href={ this.props.code }>Code</a> : null
+								<a className="pure-u-1-2" href={ this.props.code }><span className="assistive-text">{this.props.title}</span>Code</a> : null
 						}
 					</div>
 				</div>
