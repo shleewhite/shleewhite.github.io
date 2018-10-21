@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Nav from './components/Nav';
-import Portfolio from './components/Portfolio';
-import Resume from './components/Resume';
+import Portfolio from './components/pages/Portfolio';
+import Resume from './components/pages/Resume';
 import Footer from './components/Footer';
 import {
   Route,

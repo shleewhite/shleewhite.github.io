@@ -48,26 +48,6 @@ a {
 
 .pure-menu-link:hover, .pure-menu-link:focus { background-color: transparent; }
 
-.pure-menu-link:before {
-  content: "";
-  position: absolute;
-  width: 65%;
-  height: 3px;
-  bottom: 0;
-  background-color: #777;
-  visibility: hidden;
-  -webkit-transform: scaleX(0);
-  transform: scaleX(0);
-  -webkit-transition: all .5s cubic-bezier(1,.25,0,.75) 0s;
-  transition: all .5s cubic-bezier(1,.25,0,.75) 0s;
-}
-	
-.pure-menu-link:hover:before {
-	visibility: visible;
-	-webkit-transform: scaleX(1);
-	transform: scaleX(1);
-}
-
 #footer {
 	background-color: #777;
 	padding-top: 20px;
@@ -76,9 +56,7 @@ a {
 	font-size: 0.85em;
 }
 
-footer ul {
-	list-style-type: none;
-}
+footer ul { list-style-type: none; }
 
 .footer-li {
 	justify-content: center;
