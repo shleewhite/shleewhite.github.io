@@ -35,6 +35,7 @@ p { margin: 0px; }
 .card a {
 	color: #4E8098;
 	text-decoration: underline;
+	font-weight: bold;
 }
 
 .card-title {

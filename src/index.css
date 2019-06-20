@@ -17,10 +17,10 @@ body {
 
 .pure-g [class*=pure-u] { font-family: 'Oxygen', sans-serif; }
 
-a {
+/* a {
 	color: #071E22;
 	text-decoration: none;
-}
+} */
 
 .pure-menu {
 	color: #A22522;
@@ -42,7 +42,7 @@ a {
 }
 
 .pure-menu-link {
-  text-decoration: none;
+	text-decoration: underline;
 	position: relative;
 }
 
@@ -66,4 +66,5 @@ footer ul { list-style-type: none; }
 .footer-li a {
 	color: #4E8098;
 	text-decoration: underline;
+	font-weight: bold;
 }

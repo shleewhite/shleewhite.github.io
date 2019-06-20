@@ -4,21 +4,26 @@ class ExpSection extends Component {
   render() {
     return (
       <div className="exp-section">
-        <h3>{ this.props.title }</h3>
-        <h4>{ this.props.location } — { this.props.duration }</h4>
-        { this.props.children }
+        <h3>{this.props.title}</h3>
+        <h4>{this.props.location} — {this.props.duration}</h4>
+        {this.props.children}
       </div>
     );
   }
 }
 
 class Resume extends Component {
+  componentDidMount() {
+    document.title = "Resume: Lee White"
+  }
+
   render() {
     return (
-      <div className="pure-u-1">
+      <main className="pure-u-1">
+        <h1>Resume</h1>
         <div className="resume-section">
           <h2>Education</h2>
-          <h5 className="college">University of California, Santa Cruz:</h5>
+          <h3 className="college">University of California, Santa Cruz:</h3>
           <p>Computer Science B.A., Graduated June 2018</p>
           <ul className="grad-info">
             <li>Received University Honors and Cum Laude</li>
@@ -34,7 +39,7 @@ class Resume extends Component {
           >
             <p>
               Main project was Accessibility Patterns, a section of the Lightning Design System site
-              that has documentation on how to correctly implement dynamic components with working 
+              that has documentation on how to correctly implement dynamic components with working
               examples and explanations as to why the guidelines are there.
             </p>
           </ExpSection>
@@ -54,7 +59,7 @@ class Resume extends Component {
             duration="October 2015 - March 2018"
           >
             <p>
-              Hired to migrate archived news articles from antiquated database to new one, but finished. 
+              Hired to migrate archived news articles from antiquated database to new one, but finished.
               Write JavaScript tools for professors. Sift through UCSC codebase to fix errors, update websites,
               and combine redundant subsites.
             </p>
@@ -72,12 +77,12 @@ class Resume extends Component {
         </div>
         <div className="resume-section">
           <h2>Skills</h2>
-          <h5>Technical</h5>
+          <h3>Technical</h3>
           <ul>
             <li>Proficient with JavaScript, HTML, CSS, Python</li>
             <li>Experience with C, Java</li>
           </ul>
-          <h5>Courses</h5>
+          <h3>Courses</h3>
           <ul>
             <li>Intro to Software Design, Software Design I, II</li>
             <li>Mobile Applications</li>
@@ -86,7 +91,7 @@ class Resume extends Component {
           </ul>
         </div>
         <div className="ref">References Upon Request</div>
-      </div>
+      </main>
     );
   }
 }
