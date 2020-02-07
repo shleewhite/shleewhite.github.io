@@ -70,6 +70,13 @@ class Portfolio extends Component {
 				<h2>Talks</h2>
 				<ul>
 					<li>
+						[UPCOMING]
+						{` `}<a className="link" href="https://www.csun.edu/cod/conference/sessions/index.php/public/presentations/view/4272">
+							Web Components and Accessibility
+						</a>
+						: with Jesse Hausler, CSUN 2020
+					</li>
+					<li>
 						<a className="link" href="https://success.salesforce.com/sessions?eventId=a1Q3A000021ea1UUAQ#/session/a2q3A000002BJNf">
 							Salesforce for All: Building Accessible Lightning Web Components
 						</a>
