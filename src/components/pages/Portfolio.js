@@ -6,6 +6,7 @@ import ap_pic from '../../images/a11y_patterns.png';
 import bb_pic from '../../images/button_builder.png';
 import mp_pic from '../../images/marine_plastics.png';
 import gs_pic from '../../images/game_share.png';
+import tq_pic from '../../images/team_quiz.png';
 
 class Card extends Component {
 	componentDidMount() {
@@ -45,7 +46,51 @@ class Portfolio extends Component {
 		return (
 			<main className="pure-u-1">
 				<h1>Portfolio</h1>
+				<h2>Blogs</h2>
+				<ul>
+					<li>
+						<a className="link" href="https://developer.salesforce.com/blogs/2020/01/accessibility-for-web-components.html">
+							Accessibility for Web Components
+						</a>
+						: Salesforce Developers Blog, 1/23/2020
+					</li>
+					<li>
+						<a className="link" href="https://developer.salesforce.com/blogs/2020/01/intro-to-web-components.html">
+							Intro to Web Components
+						</a>
+						: Salesforce Developers Blog, 1/16/2020
+					</li>
+					<li>
+						<a className="link" href="https://admin.salesforce.com/blog/2018/how-to-configure-salesforce-for-your-blind-and-low-vision-users">
+							How to Configure Salesforce for Your Blind & Low Vision Users
+						</a>
+						: with Jesse Hausler, Salesforce Admins Blog, 12/4/2018
+					</li>
+				</ul>
+				<h2>Talks</h2>
+				<ul>
+					<li>
+						<a className="link" href="https://success.salesforce.com/sessions?eventId=a1Q3A000021ea1UUAQ#/session/a2q3A000002BJNf">
+							Salesforce for All: Building Accessible Lightning Web Components
+						</a>
+						: with Sri Kolagani, Dreamforce 2019
+					</li>
+				</ul>
+				<h2>Coding Projects</h2>
 				<div className="pure-g card-container">
+					<Card
+						title="Team Quiz"
+						img={tq_pic}
+						code="https://github.com/salesforce-ux/team-quiz"
+						live="https://team-quiz-5984b.web.app"
+					>
+						<p>
+							Started as a hackday project, it is a game to help all members of an organization or team get to
+							know each other. Users can create a game, have people put their responses to the given questions,
+							and then compete to see who knows the most about their colleagues. It is built wiht ReactJS, Firebase,
+							and Web Components.
+						</p>
+					</Card>
 					<Card
 						title="Marine Plastics Monitor"
 						img={mp_pic}
@@ -54,9 +99,9 @@ class Portfolio extends Component {
 					>
 						<p>
 							Led team of six people over two quarters to create a site for the Santa Cruz based
-							non-profit <a href="https://cleanoceansinternational.org/">Clean Oceans International</a>.
+							non-profit <a className="link" href="https://cleanoceansinternational.org/">Clean Oceans International</a>.
 							The site is a database for collecting information about the types and quantaties of marine
-							debris around the world. It is built with ReactJS, D3, MongoDB and uses the Google Maps API and Auth0.
+							debris around the world. It is built with ReactJS, D3, MongoDB, the Google Maps API and Auth0.
 						</p>
 					</Card>
 					<Card
@@ -109,7 +154,7 @@ class Portfolio extends Component {
 						code="https://codepen.io/shleewhite/pen/mVxjdx"
 					>
 						<p>
-							Made for <a href="https://urelations.ucsc.edu/">UCSC Relations</a> to generate uniform images that
+							Made for <a className="link" href="https://urelations.ucsc.edu/">UCSC Relations</a> to generate uniform images that
 							can be used as buttons in email marketing.
 						</p>
 					</Card>

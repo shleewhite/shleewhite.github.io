@@ -32,7 +32,7 @@ p { margin: 0px; }
 	box-shadow: 5px 5px 5px 0px rgba(206,211,220,0.67);
 }
 
-.card a {
+.link {
 	color: #4E8098;
 	text-decoration: underline;
 	font-weight: bold;

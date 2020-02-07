@@ -21,76 +21,77 @@ class Resume extends Component {
     return (
       <main className="pure-u-1">
         <h1>Resume</h1>
-        <div className="resume-section">
-          <h2>Education</h2>
-          <h3 className="college">University of California, Santa Cruz:</h3>
-          <p>Computer Science B.A., Graduated June 2018</p>
-          <ul className="grad-info">
-            <li>Received University Honors and Cum Laude</li>
-            <li>GPA: 3.68</li>
-          </ul>
+        <p className="title">UX Engineer</p>
+        <div className="resume-grid">
+          <div className="resume-column">
+            <h2>Experience</h2>
+            <ExpSection
+              title="UX Engineer, Accessibility, Salesforce"
+              location="San Francisco, CA"
+              duration="August 2018 - Present"
+            >
+              <p>
+                Responsible for ensuring new UI’s work for all users, including prototyping
+                complicated components, writing documentation on how to implement components,
+                and researching new technologies and their accessibility impacts.
+                Also contributed to the Salesforce Design System React project.
+              </p>
+            </ExpSection>
+            <ExpSection
+              title="Accessibility Intern, Salesforce"
+              location="San Francisco, CA"
+              duration="June - September 2017"
+            >
+              <p>
+                Main project was Accessibility Patterns, a section of the Lightning Design System site
+                that has documentation on how to correctly implement dynamic components with working
+                examples and explanations as to why the guidelines are there.
+              </p>
+            </ExpSection>
+            <ExpSection
+              title="Web Migration Assistant, UCSC Relations"
+              location="Santa Cruz, CA"
+              duration="October 2015 - March 2018"
+            >
+              <p>
+                Initially hired to migrate archived news articles from antiquated database to a new one.
+                Expanded to write JavaScript tools for professors and marketers, sift through UCSC codebase
+                to fix errors, and update websites.
+              </p>
+            </ExpSection>
+          </div>
+          <div className="resume-column">
+            <h2>Education</h2>
+            <h3>Computer Science, B.A.</h3>
+            <p className="college">UC Santa Cruz, June 2018</p>
+            <p><strong>Overall GPA:</strong> 3.68</p>
+            <p><strong>Honors:</strong> University Honors, Cum Laude</p>
+            <p><strong>Courses:</strong></p>
+            <ul>
+              <li>Intro to Software Design</li>
+              <li>Software Design I, II</li>
+              <li>User Experience</li>
+              <li>Natural Language Processing</li>
+            </ul>
+            <h2>Skills</h2>
+            <p>
+              <strong>Web Development:</strong>
+            </p>
+            <ul>
+              <li>HTML, CSS, JavaScript</li>
+              <li>React</li>
+              <li>Web Components</li>
+              <li>Firebase, MongoDB</li>
+            </ul>
+            <p>
+              <strong>Communication:</strong>
+            </p>
+            <ul>
+              <li>Technical Writing</li>
+              <li>Public Speaking</li>
+            </ul>
+          </div>
         </div>
-        <div className="resume-section">
-          <h2>Experience</h2>
-          <ExpSection
-            title="Accessibility Intern, Salesforce"
-            location="San Francisco, CA"
-            duration="June - September 2017"
-          >
-            <p>
-              Main project was Accessibility Patterns, a section of the Lightning Design System site
-              that has documentation on how to correctly implement dynamic components with working
-              examples and explanations as to why the guidelines are there.
-            </p>
-          </ExpSection>
-          <ExpSection
-            title="Grader, UCSC Baskin School of Engineering"
-            location="Santa Cruz, CA"
-            duration="January - June 2018"
-          >
-            <p>
-              Graded on paper, exams, and programming assignments for CMPS 101: Abstract Data Types
-              and CMPS 143: Natural Language Processing.
-            </p>
-          </ExpSection>
-          <ExpSection
-            title="Web Migration Assistant, UCSC Relations"
-            location="Santa Cruz, CA"
-            duration="October 2015 - March 2018"
-          >
-            <p>
-              Hired to migrate archived news articles from antiquated database to new one, but finished.
-              Write JavaScript tools for professors. Sift through UCSC codebase to fix errors, update websites,
-              and combine redundant subsites.
-            </p>
-          </ExpSection>
-          <ExpSection
-            title="Engineering Intern, Originate"
-            location="San Francisco, CA"
-            duration="June - July 2015"
-          >
-            <p>
-              Worked as a full stack ruby engineer on their web apps:
-              made changes to the database, made aesthetic changes, and added responsive JavaScript.
-            </p>
-          </ExpSection>
-        </div>
-        <div className="resume-section">
-          <h2>Skills</h2>
-          <h3>Technical</h3>
-          <ul>
-            <li>Proficient with JavaScript, HTML, CSS, Python</li>
-            <li>Experience with C, Java</li>
-          </ul>
-          <h3>Courses</h3>
-          <ul>
-            <li>Intro to Software Design, Software Design I, II</li>
-            <li>Mobile Applications</li>
-            <li>User Experience</li>
-            <li>Natural Language Processing</li>
-          </ul>
-        </div>
-        <div className="ref">References Upon Request</div>
       </main>
     );
   }

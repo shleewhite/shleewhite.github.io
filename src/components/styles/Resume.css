@@ -9,32 +9,14 @@
 
 */
 
-.resume-section {
-  margin: 0px 20px 0px 20px;
+.resume-grid {
+	display: grid;
+	grid-template-columns: 60% auto;
 }
 
-
-.resume-section h2 {
-  border-top: black 1px solid;
-  text-transform: uppercase;
-}
-
-.resume-section h3 {
-	font-style: italic;
-	margin-bottom: 0.5em;
-}
-
-.resume-section h4 {
-	color: #777;
-	margin-top: 0px;
-	margin-bottom: 10px;
-}
-
-.resume-section h5, .resume-section div h5 {
-	font-weight: bold;
-	font-size: 1em;
-	margin-top: 1.25em;
-	margin-bottom: 0px;
+.resume-column {
+	margin-left: 1.5em;
+	margin-right: 1.5em;
 }
 
 .exp-section {
@@ -45,10 +27,6 @@
 	margin-top: 0px;
 }
 
-.ref {
-	font-style: italic;
-	font-weight: bolder;
+.title {
 	font-size: 1.25em;
-	text-align: center;
-	margin-bottom: 1.5em;
 }
