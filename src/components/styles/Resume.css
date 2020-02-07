@@ -11,7 +11,7 @@
 
 .resume-grid {
 	display: grid;
-	grid-template-columns: 60% auto;
+	grid-template-columns: 70% auto;
 }
 
 .resume-column {
