@@ -2,9 +2,8 @@
   "name": "website-2.0",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://shleewhite.github.io/personal_site/",
+  "homepage": "https://shleewhite.github.io/",
   "dependencies": {
-    "gh-pages": "^2.2.0",
     "react": "^15.6.2",
     "react-dom": "^15.6.1",
     "react-router-dom": "^4.3.1",
@@ -17,5 +16,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "gh-pages": "^2.2.0"
   }
 }
