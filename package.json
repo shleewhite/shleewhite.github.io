@@ -1,0 +1,21 @@
+{
+  "name": "personal-website",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "https://shleewhite.github.io/",
+  "scripts": {
+    "docs": "eleventy --output=/docs",
+    "docs:serve": "es-dev-server --root-dir=docs --node-resolve --watch",
+    "serve": "es-dev-server --node-resolve --watch"
+  },
+  "dependencies": {
+    "lit-element": "^2.4.0",
+    "lit-html": "^1.1.1"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.0",
+    "es-dev-server": "^1.57.5",
+    "eslint": "^7.9.0",
+    "eslint-plugin-html": "^6.1.0"
+  }
+}

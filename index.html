@@ -1,1 +1,86 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"><link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous"><link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css"><link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet"><title>Portfolio: Lee White</title><link href="/static/css/main.06a8b819.css" rel="stylesheet"></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"></div><script type="text/javascript" src="/static/js/main.f5b3e520.js"></script></body></html>
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>Lee White</title>
+  <link rel="stylesheet" href="index.css">
+  <script type="module" src="components/ListCard.js"></script>
+  <script type="module" src="components/SiteFooter.js"></script>
+  <script type="module" src="components/SiteNav.js"></script>
+</head>
+
+<body>
+  <site-nav isroot="true"></site-nav>
+  <main>
+    <div class="landing-page__header">
+      <h1 class="hero">Lee White</h1>
+      <p class="hero__subtitle">
+        ux engineer passionate about accessibility, crafts, and all things javascript
+      </p>
+    </div>
+    <p class="landing-page__content">
+      Howdy! I am currently a Senior UX Engineer at Salesforce.
+    </p>
+    <div class="landing-page__secondary">
+      <div>
+        <h2 class="landing-page__subheader">Writing</h2>
+        <ul>
+          <list-card date="1/23/2020">
+            <a slot="title" class="card-header-link"
+              href="https://developer.salesforce.com/blogs/2020/01/accessibility-for-web-components.html">
+              Accessibility for Web Components
+            </a>
+
+            <p slot="desc">
+              We look at how this new technology currently affects accessibility. It is
+              important to note that these considerations are for web components and extend to
+              Lightning Web Components as well.
+            </p>
+          </list-card>
+          <list-card date="1/16/2020">
+            <a slot="title" class="card-header-link"
+              href="https://developer.salesforce.com/blogs/2020/01/intro-to-web-components.html">
+              Intro to Web Components
+            </a>
+            <p slot="desc">
+              Web components are a new set of APIs built on web standards that are widely adopted by
+              browsers. They allow developers to make flexible custom components–but with that
+              flexibility comes responsibility.
+            </p>
+          </list-card>
+          <list-card contributers="Jesse Hausler" date="12/4/2018">
+            <a slot="title" class="card-header-link"
+              href="https://admin.salesforce.com/blog/2018/how-to-configure-salesforce-for-your-blind-and-low-vision-users">
+              How to Configure Salesforce for Your Blind and Low Vision Users
+            </a>
+            <p slot="desc">
+              One of the most common requests is how to optimize apps for blind or low-vision users.
+              While this may be a small percentage of your user base, as an #AwesomeAdmin the
+              positive outcomes of optimizing for these users is indeed very large.
+            </p>
+          </list-card>
+        </ul>
+      </div>
+      <div>
+        <h2 class="landing-page__subheader">Speaking</h2>
+        <ul>
+          <list-card contributers="Sri Kolagani" date="Dreamforce 2019">
+            <a slot="title" class="card-header-link"
+              href="https://success.salesforce.com/sessions?eventId=a1Q3A000021ea1UUAQ#/session/a2q3A000002BJNf">
+              Salesforce for All: Building Accessible Web Components
+            </a>
+            <p slot="desc">
+              Building an app that is accessible and inclusive isn't just a legal requirement, it
+              makes good business sense. We'll focus on common interaction patterns and best
+              practices using Lightning Web Components with accessibility baked-in.
+            </p>
+          </list-card>
+        </ul>
+      </div>
+    </div>
+  </main>
+  <site-footer></site-footer>
+</body>
+
+</html>
