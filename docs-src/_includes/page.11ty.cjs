@@ -18,11 +18,11 @@ module.exports = function (data) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>${title}</title>
     <link rel="stylesheet" href="${relative(page.url, '/docs.css')}">
-    <script type="module" src="${relative(
+    <script type="text/js" src="${relative(
       page.url,
       '/cmps/list-card.bundled.js'
     )}"></script>
-    <script type="module" src="${relative(
+    <script type="text/js" src="${relative(
       page.url,
       '/cmps/mode-toggle.bundled.js'
     )}"></script>
