@@ -156,8 +156,8 @@ a:focus {
 nav {
   display: grid;
   grid-template-columns: 1fr auto auto;
-  gap: var(--medium-space) 0;
-  grid-gap: var(--medium-space) 0;
+  gap: 0 var(--medium-space);
+  grid-gap: 0 var(--medium-space);
 }
 
 .home {
