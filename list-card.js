@@ -4,7 +4,7 @@ import {
   css
 } from 'lit-element';
 
-class ListCard extends LitElement {
+export class ListCard extends LitElement {
   static get properties() {
     return {
       contributers: {
@@ -42,9 +42,12 @@ class ListCard extends LitElement {
       }
 
       h3 {
-        color: var(--primary-c);
         margin: var(--smallest-space) 0px;
-        font-weight: normal;
+        padding: var(--smallest-space);
+        font-weight: bold;
+        background-color: var(--primary-c);
+        border-radius: 2px;
+        width: max-content;
       }
 
       .list-card__tag-list {
@@ -83,6 +86,13 @@ class ListCard extends LitElement {
 
       .list-card__footer span:last-child {
         justify-self: end;
+      }
+
+      @media (min-width: 320px) and (max-width: 767px) {
+        h3 {
+          margin: 0;
+          width: unset;
+        }
       }
     `;
   }
@@ -132,4 +142,4 @@ class ListCard extends LitElement {
   }
 }
 
-customElements.define('list-card', ListCard);
+window.customElements.define('list-card', ListCard);
