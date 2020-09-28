@@ -101,12 +101,15 @@ a:focus {
 .landing-page__header {
   display: grid;
   grid-template-columns: 30% auto;
+  gap: var(--small-space) 0;
+  grid-gap: var(--small-space) 0;
 }
 
 .landing-page__secondary {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 0 var(--small-space);
+  grid-gap: 0 var(--small-space);
 }
 
 .landing-page__subheader {
@@ -144,6 +147,7 @@ a:focus {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(5, auto);
   gap: var(--small-space);
+  grid-gap: var(--small-space);
   align-items: center;
 }
 
@@ -152,7 +156,8 @@ a:focus {
 nav {
   display: grid;
   grid-template-columns: 1fr auto auto;
-  column-gap: var(--medium-space);
+  gap: var(--medium-space) 0;
+  grid-gap: var(--medium-space) 0;
 }
 
 .home {
@@ -189,7 +194,8 @@ nav {
 footer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  column-gap: var(--medium-space);
+  gap: var(--medium-space) 0;
+  grid-gap: var(--medium-space) 0;
   justify-items: center;
   align-items: center;
   border-top: 1px solid var(--background-darker-c);
@@ -253,7 +259,8 @@ footer a:focus {
   .portfolio-page__grid {
     grid-template-columns: auto;
     grid-template-rows: auto;
-    row-gap: 15px;
+    gap: 0 15px;
+    grid-gap: 0 15px;
   }
 
   .portfolio-page__grid>* {
@@ -275,7 +282,8 @@ footer a:focus {
   .landing-page__header {
     grid-template-columns: auto;
     grid-template-rows: auto;
-    row-gap: 15px;
+    gap: 0 15px;
+    grid-gap: 0 15px;
   }
 
   .home,
