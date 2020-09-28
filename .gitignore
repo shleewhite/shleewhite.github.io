@@ -1,0 +1,7 @@
+/node_modules/
+
+# only generated for size check
+*.bundled.js
+
+.vscode/
+*.DS_Store
